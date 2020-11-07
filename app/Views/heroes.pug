@@ -1,0 +1,14 @@
+include mixins/base
+
+doctype html
+html
+  head
+    title Secure Heroes
+    meta(charset="utf-8")
+    link(href="/stylesheets/style.css" rel="stylesheet")
+  body
+    .container
+      h1 Hall of Heroes
+      ul
+        each hero in heroes
+          li=hero.alias + " (" + hero.real_name + ")"

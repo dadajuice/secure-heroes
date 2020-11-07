@@ -1,0 +1,26 @@
+include mixins/base
+
+doctype html
+html
+  head
+    title Secure Heroes
+    meta(charset="utf-8")
+    link(href="/stylesheets/style.css" rel="stylesheet")
+  body
+    #general-wrapper.container-fluid
+      .row
+        .col-6.p-0
+          h1 secure heroes
+          p Where heroes know their name.
+        .col-6.p-0
+          div
+            +flash
+            +form("post", "/")
+              .form-group
+                label Username
+                input.form-control(name="username")
+              .form-group
+                  label Password
+                  input.form-control(type="password" name="password")
+              .text-right
+                button.btn.btn-sm.btn-success Connect
